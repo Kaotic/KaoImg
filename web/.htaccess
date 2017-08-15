@@ -1,0 +1,16 @@
+# 404
+ErrorDocument 404 /404.php
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} "^/api/upload"
+RewriteRule (.*) /upload.php [L]
+
+RewriteCond %{REQUEST_URI} "^/delete/([a-zA-Z0-9]+)$"
+RewriteRule (.*) "/delete.php?image=$1"
+
+RewriteCond %{REQUEST_URI} "^/thumb/([a-zA-Z0-9]+)$"
+RewriteRule (.*) "/thumb.php?image=$1"
+
+RewriteCond %{REQUEST_URI} "^/([a-zA-Z0-9]+)$"
+RewriteRule (.*) "/view.php?image=$1"
