@@ -1,0 +1,14 @@
+﻿{
+  "Name": "KaoImg",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader",
+  "RequestType": "POST",
+  "RequestURL": "https://img.kaotic.us/api/upload",
+  "FileFormName": "file",
+  "Arguments": {
+    "token": "your_token_key"
+  },
+  "ResponseType": "Text",
+  "URL": "$json:data.direct$",
+  "ThumbnailURL": "$json:data.thumb$",
+  "DeletionURL": "$json:data.delete$"
+}
